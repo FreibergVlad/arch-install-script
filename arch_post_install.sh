@@ -87,6 +87,15 @@ install_packages() {
         "${packages[@]}"
 }
 
+install_pacman_hooks() {
+    local hooks_dir=/etc/pacman.d/hooks
+    sudo mkdir -p $hooks_dir
+    for hook in $script_dir/pacman-hooks/*.hook; do
+        [ -e "$hook" ] || continue
+        sudo cp $hook $hooks_dir
+    done
+}
+
 setup_screensaver() {
     sudo systemctl enable betterlockscreen@$USER
 }
@@ -121,6 +130,9 @@ main() {
 
     log "Installing packages..."
     exec_with_log install_packages
+
+    log "Installing Pacman hooks..."
+    exec_with_log install_pacman_hooks
 
     log "Enabling screensaver (betterlockscreen)..."
     log "Probably you want to set lock screen background after: 'betterlockscreen -u IMAGE'"
