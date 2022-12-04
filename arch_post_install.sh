@@ -19,6 +19,7 @@ packages=(
     "qtile" # Qtile window manager
     "xss-lock" # use external locker as X screen saver
     "firefox" # web browser
+    "chromium" # one more web browser
     "alacritty" # terminal emulator
     "telegram-desktop" # official Telegram client
     "ttf-hack-nerd" # font which will be used in the system
@@ -35,25 +36,28 @@ packages=(
     "tlp-rdw" # part of 'tlp', enable / disable Bluetooth, Wi-Fi and WWAN devices by events
     "dunst" # notification daemon
     "unzip" # working with .zip archives
+    "neofetch" # system info fetcher
+    "pacman-contrib" # various tools for pacman
+    "reflector" # script which updates mirrorlist
 
     # DEVELOPMENT PACKAGES
     "docker"
     "docker-compose"
-    "go"
-    "pyright"
+    "go" # Go compiler and tools
     "python-pip"
     "python-setuptools"
-    "python-pynvim"
-    "ipython"
+    "python-pynvim" # Python library for Neovim
+    "ipython" # improved Python shell
+    "flake8" # Python linter
+    "npm"
     "ripgrep" # for telescope
     "fd" # for telescope
-    "openvpn"
-    "openconnect"
+    "openvpn" # VPN client
+    "openconnect" # VPN client
 
     # AUR PACKAGES
-    "teams-for-linux" # unofficial Teams client (AUR)
-    "betterlockscreen" # session lock, i3lock wrapper (AUR)
-    "spotify" # official Spotify client (AUR)
+    "betterlockscreen" # session lock, i3lock wrapper
+    "openvpn-update-resolv-conf-git" # needed to make AWS VPN work with OpenVPN
 )
 
 dotfiles() {
