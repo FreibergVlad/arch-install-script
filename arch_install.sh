@@ -80,11 +80,14 @@ kernel_params=(
     "root=/dev/$lvm_vol_group_name/$lvm_root_vol_name"
     # set 'allow-discards' to enable TRIM support
     "cryptdevice=$luks_device:$decrypted_luks_part_label:allow-discards"
+    # required for hibernation
     "resume=/dev/$lvm_vol_group_name/$lvm_swap_vol_name"
     "rw"
     "quiet"
     "loglevel=3"
     "udev.log_level=3"
+    # disable this horrible PC speaker sound at all
+    "modprobe.blacklist=pcspkr"
 )
 user_groups=wheel,video,input
 
