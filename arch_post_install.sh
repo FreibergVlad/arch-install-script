@@ -69,12 +69,9 @@ install_dotfiles() {
 }
 
 install_yay() {
-    cd $HOME
-    git clone https://aur.archlinux.org/yay-git.git
-    cd yay-git
-    makepkg -si --noconfirm
-    cd ..
-    rm -rf yay-git
+    local repo_path=$HOME/repos/yay
+    git clone https://aur.archlinux.org/yay.git $repo_path
+    (cd $repo_path && makepkg -si --noconfirm)
 }
 
 install_packages() {
