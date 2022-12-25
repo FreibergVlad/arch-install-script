@@ -46,12 +46,12 @@ packages=(
     "docker"
     "docker-compose"
     "go" # Go compiler and tools
-    "python-pip"
+    "python-pip" # Python package manager
     "python-setuptools"
     "python-pynvim" # Python library for Neovim
     "ipython" # improved Python shell
     "flake8" # Python linter
-    "npm"
+    "npm" # Node package manager
     "ripgrep" # for telescope
     "fd" # for telescope
     "openvpn" # VPN client
@@ -60,6 +60,7 @@ packages=(
     # AUR PACKAGES
     "betterlockscreen" # session lock, i3lock wrapper
     "openvpn-update-resolv-conf-git" # needed to make AWS VPN work with OpenVPN
+    "golangci-lint" # Golang linter
 )
 
 dotfiles() {
