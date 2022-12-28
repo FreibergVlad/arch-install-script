@@ -40,7 +40,8 @@ packages=(
     "pacman-contrib" # various tools for pacman
     "reflector" # script which updates mirrorlist
     "blueman" # bluetooth manager
-    "lxappearance" # GTK theme picker
+    "lxappearance-gtk3" # GTK theme picker
+    "python-dbus-next" # Python library for D-Bus, required by some of Qtile widgets
 
     # DEVELOPMENT PACKAGES
     "docker"
