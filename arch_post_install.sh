@@ -42,6 +42,7 @@ packages=(
     "blueman" # bluetooth manager
     "lxappearance-gtk3" # GTK theme picker
     "python-dbus-next" # Python library for D-Bus, required by some of Qtile widgets
+    "udiskie" # auto-mount USB disks
 
     # DEVELOPMENT PACKAGES
     "docker"
