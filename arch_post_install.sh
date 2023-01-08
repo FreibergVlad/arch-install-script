@@ -77,6 +77,8 @@ install_dotfiles() {
     git clone --bare https://github.com/FreibergVlad/dotfiles.git $HOME/.dotfiles.git
     dotfiles config --local status.showUntrackedFiles no
     dotfiles checkout
+    # use SSH for all next work with dotfiles
+    dotfiles remote set-url origin git@github.com:FreibergVlad/dotfiles.git
 }
 
 install_yay() {
