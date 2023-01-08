@@ -55,11 +55,11 @@ lvm_root_vol_name=root
 luks_device=/dev/disk/by-partlabel/$luks_part_label
 efi_device=/dev/disk/by-partlabel/$efi_part_label
 
-kernel=linux-lts
 base_packages=(
     "base"
     "base-devel"
-    "${kernel}"
+    "linux"
+    "linux-lts"
     "linux-firmware"
     "${cpu_vendor}-ucode"
     "lvm2"
@@ -197,9 +197,17 @@ EOF
 
 cat << EOF > /mnt/boot/loader/entries/arch.conf
 title    Arch Linux
-linux    /vmlinuz-${kernel}
+linux    /vmlinuz-linux
 initrd   /${cpu_vendor}-ucode.img
-initrd   /initramfs-${kernel}.img
+initrd   /initramfs-linux.img
+options  ${kernel_params[@]}
+EOF
+
+cat << EOF > /mnt/boot/loader/entries/arch-lts.conf
+title    Arch Linux
+linux    /vmlinuz-linux-lts
+initrd   /${cpu_vendor}-ucode.img
+initrd   /initramfs-linux-lts.img
 options  ${kernel_params[@]}
 EOF
 
