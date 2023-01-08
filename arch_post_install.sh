@@ -43,6 +43,7 @@ packages=(
     "lxappearance-gtk3" # GTK theme picker
     "python-dbus-next" # Python library for D-Bus, required by some of Qtile widgets
     "udiskie" # auto-mount USB disks
+    "libreoffice-still" # office programs
 
     # DEVELOPMENT PACKAGES
     "docker"
@@ -52,6 +53,7 @@ packages=(
     "python-setuptools"
     "python-pynvim" # Python library for Neovim
     "ipython" # improved Python shell
+    "jupyterlab" # interactive browser-based Python environment
     "flake8" # Python linter
     "npm" # Node package manager
     "ripgrep" # for telescope
