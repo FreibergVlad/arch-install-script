@@ -79,6 +79,8 @@ install_dotfiles() {
     dotfiles checkout
     # use SSH for all next work with dotfiles
     dotfiles remote set-url origin git@github.com:FreibergVlad/dotfiles.git
+    dotfiles config user.name vfreiberg
+    dotfiles config user.email ""
 }
 
 install_yay() {
