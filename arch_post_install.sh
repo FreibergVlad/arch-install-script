@@ -164,6 +164,9 @@ main() {
     log "Enabling bluetooth.service..."
     exec_with_log sudo systemctl enable bluetooth
 
+    log "Applying XDG settings"
+    exec_with_log xdg-settings set default-web-browser firefox.desktop
+
     log "Done. Restart the machine by typing 'reboot' and login to the new system"
     log "You can check the full installation log in $log_file"
 }
