@@ -44,6 +44,7 @@ packages=(
     "python-dbus-next" # Python library for D-Bus, required by some of Qtile widgets
     "udiskie" # auto-mount USB disks
     "libreoffice-still" # office programs
+    "spotify-launcher" # Spotify
 
     # DEVELOPMENT PACKAGES
     "docker"
