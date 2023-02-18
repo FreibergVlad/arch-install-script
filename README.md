@@ -6,6 +6,9 @@ used to install Arch Linux with minimal set of packages required for booting int
 working system. Second one installs Xorg, window manager, my personal dotfiles, various
 daily-use applications and activates necessary `systemd` services. 
 
+I use these scripts on my ThinkPad E15 Gen4 AMD, so if you want to re-use them,
+you probably should change some stuff to fit your machine.
+
 ## Notes & Assumptions
 
 - You're booted in UEFI mode. BIOS mode is not supported by script.
