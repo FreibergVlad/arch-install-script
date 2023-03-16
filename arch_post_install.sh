@@ -61,6 +61,7 @@ packages=(
     "fd" # for telescope
     "openvpn" # VPN client
     "openconnect" # VPN client
+    "jre-openjdk" # Java Runtime Environment, to execute Java applications
 
     # AUR PACKAGES
     "betterlockscreen" # session lock, i3lock wrapper
@@ -125,7 +126,7 @@ setup_docker() {
 
 setup_xorg() {
     echo 'exec qtile start' >> ~/.xinitrc
-    echo '[ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && exec startx' >> ~/.bash_profile
+    echo '[ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && startx' >> ~/.bash_profile
 }
 
 main() {
