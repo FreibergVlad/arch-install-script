@@ -138,4 +138,7 @@ common_setup() {
     
     log "Enabling docker service..."
     exec_with_log setup_docker
+
+    log "Enabling bluetooth.service..."
+    exec_with_log sudo systemctl enable bluetooth
 }
